@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商務型網站首頁</title>
+    <style>
+        /* 全局樣式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        /* 導航欄樣式 */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* 頁面內容樣式 */
+        .header {
+            background-image: url('header-background.jpg');
+            height: 600px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #0062cc;
+            color: #fff;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: 1.25rem;
+        }
+
+        /* 媒體查詢 */
+        @media screen and (max-width: 768px) {
+            .header {
+                height: 400px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導航欄 -->
+    <div class="navbar">
+        <a href="#">首頁</a>
+        <a href="#">關於我們</a>
+        <a href="#">產品</a>
+        <a href="#">聯繫我們</a>
+    </div>
+
+    <!-- 頁面內容 -->
+    <div class="header">
+        <h1>歡迎來到我們的商務型網站</h1>
+        <p>我們提供高效的解決方案，讓您的業務更成功</p>
+        <a href class="cta-button">了解更多</a>
+    </div>
+    <div class="content">
+        <h2>關於我們</h2>
+        <p>我們是一家致力於為客戶提供最佳業務解決方案的公司。我們的專業團隊可以為您提供高品質的產品和優質的服務。</p>
+        <p>此外，我們提供 Ragic 服務，可以幫助您更有效地管理您的業務數據。點擊下面的按鈕了解更多。</p>
+        <a href="https://www.ragic.com/" target="_blank" class="cta-button">了解更多關於 Ragic</a>
+    </div>
+</body>
+
+</html>
