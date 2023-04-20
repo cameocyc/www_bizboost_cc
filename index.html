@@ -29,21 +29,34 @@
         }
 
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #d60e00;
+
         }
 
         /* 頁面內容樣式 */
         .header {
-            background-image: url('header-background.jpg');
-            height: 600px;
-            background-size: cover;
+
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: #fff;
             text-align: center;
+            height: 50vh;
+            /* Header背景 */
+            /* background-image: url(assets/img/about-ragic-logo.png);
+            backdrop-filter: blur(100px);
+            background-size: cover;
+            background-position: center center;
+			background-repeat: no-repeat; */
+            /* 漸層背景 */
+            /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.01)),
+				url(assets/img/about-ragic-logo.png);
+            backdrop-filter: blur(100px);
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 100vh;
+            margin: 0; */
         }
 
         .header h1 {
@@ -58,7 +71,7 @@
 
         .cta-button {
             display: inline-block;
-            background-color: #007bff;
+            background-color: #d60e00;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
@@ -68,7 +81,7 @@
         }
 
         .cta-button:hover {
-            background-color: #0062cc;
+            background-color: red;
             color: #fff;
         }
 
@@ -88,15 +101,20 @@
         /* 媒體查詢 */
         @media screen and (max-width: 768px) {
             .header {
-                height: 400px;
+                height: 50vh;
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .header p {
-                font-size: 1rem;
+                font-size: 0.8rem;
+                margin: 0.5rem;
+            }
+
+            .content h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -113,7 +131,7 @@
 
     <!-- 頁面內容 -->
     <div class="header">
-        <h1>歡迎來到我們的商務型網站</h1>
+        <h1>讓您的事業蒸蒸日上</h1>
         <p>我們提供高效的解決方案，讓您的業務更成功</p>
         <a href class="cta-button">了解更多</a>
     </div>
