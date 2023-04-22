@@ -16,6 +16,10 @@ body {
     color: #333333;
 }
 
+main {
+    max-width: 960px; /* 控制宽度 */
+    margin: 0 auto; /* 水平居中 */
+  }
 
 header {
     background: linear-gradient(to top, #00796B, #009688);
