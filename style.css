@@ -1,0 +1,169 @@
+/* 在您的樣式表中引入 Noto Sans Traditional Chinese 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+.logo {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+/* 設置所有文字的字體為 Noto Sans Traditional Chinese */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+* {
+    color: #333333;
+}
+
+
+header {
+    background: linear-gradient(to top, #00796B, #009688);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+section {
+    background-color: ;
+    padding: 50px;
+    text-align: center;
+    max-width: ;
+}
+
+section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h1 {
+        font-size: 1.6rem;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
+
+/* class 属性为 left-TitleGB */
+section.left-TitleGB {
+    text-align: left;
+    padding: 20px;
+}
+
+section.left-TitleGB h1,
+section.left-TitleGB h2,
+section.left-TitleGB h3,
+section.left-TitleGB h4,
+section.left-TitleGB h5,
+section.left-TitleGB h6 {
+    color: #008E80;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    section.left-TitleGB {
+        padding: 10px;
+    }
+
+    section.left-TitleGB h1 {
+        font-size: 28px;
+    }
+
+    section.left-TitleGB h2 {
+        font-size: 24px;
+    }
+
+    section.left-TitleGB h3 {
+        font-size: 20px;
+    }
+
+    section.left-TitleGB h4 {
+        font-size: 18px;
+    }
+
+    section.left-TitleGB h5 {
+        font-size: 16px;
+    }
+
+    section.left-TitleGB h6 {
+        font-size: 14px;
+    }
+
+    section.left-TitleGB p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

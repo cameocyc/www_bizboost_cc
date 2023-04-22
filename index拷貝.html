@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商務型網站首頁</title>
+    <style>
+        /* 全局樣式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        /* 導航欄樣式 */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            height: 80px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 28px 16px;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .nav-items {
+            float: right;
+        }
+
+        .navbar .nav-items a {
+            padding: 28px 16px;
+        }
+
+        .navbar a.icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        /* 頁面內容樣式 */
+        .header {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 50vh;
+            /* Header背景 */
+            /* background-image: url(assets/img/about-ragic-logo.png);
+            backdrop-filter: blur(100px);
+            background-size: cover;
+            background-position: center center;
+			background-repeat: no-repeat; */
+            /* 漸層背景 */
+            /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.01)),
+				url(assets/img/about-ragic-logo.png);
+            backdrop-filter: blur(100px);
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 100vh;
+            margin: 0; */
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #d60e00;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: red;
+            color: #fff;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: 1.25rem;
+        }
+
+        footer {
+            margin-top: 7vh;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* 媒體查詢 */
+        @media screen and (max-width: 768px) {
+            .header {
+                height: 50vh;
+            }
+
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .header p {
+                font-size: 0.8rem;
+                margin: 0.5rem;
+            }
+
+            .content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">BizBoost.cc</a>
+        <a href="#">首頁</a>
+        <a href="#">關於我們</a>
+        <a href="#">產品</a>
+        <a href="#">聯繫我們</a>
+        <a href="#" class="icon" onclick="toggleMenu()">&#9776;</a>
+    </div>
+
+    <!-- 頁面內容 -->
+    <div class="header">
+        <h1>讓您的事業蒸蒸日上</h1>
+        <p>我們提供高效的解決方案，讓您的業務更成功</p>
+        <a href class="cta-button">了解更多</a>
+    </div>
+    <div class="content">
+        <h2>關於我們</h2>
+        <p>我們是一群致力於為客戶提供最佳業務解決方案的接案夥伴。我們的專業團隊可以為您提供高品質的產品和優質的服務。</p>
+        <p>此外，我們提供 Ragic 服務，可以幫助您更有效地管理您的業務數據。點擊下面的按鈕了解更多。</p>
+        <a href="https://www.ragic.com/" target="_blank" class="cta-button">了解更多關於 Ragic</a>
+    </div>
+    <footer>
+        <p>© 2023 BizBoost.cc. All rights reserved. In partnership with Ragic.</p>
+        <p>Ragic and the Ragic logo are registered trademarks of Ragic Inc. All rights reserved.</p>
+    </footer>
+    <script>
+        // 漢堡清單點擊時顯示/隱藏導航欄
+        function toggleMenu() {
+            var x = document.getElementsByClassName("navbar")[0];
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+
+</html>
