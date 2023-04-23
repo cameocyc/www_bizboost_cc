@@ -3,16 +3,18 @@
 }
 
 main {
-    max-width: 960px; /* 控制宽度 */
-    margin: 0 auto; /* 水平居中 */
-  }
+    max-width: 960px;
+    /* 控制宽度 */
+    margin: 0 auto;
+    /* 水平居中 */
+}
 
 header {
     background: linear-gradient(to top, #00796B, #009688);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 5rem;
     width: 100%;
     position: fixed;
     top: 0;
@@ -27,9 +29,9 @@ header {
 }
 
 .logo {
-    font-weight:bolder;
+    font-weight: bolder;
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin: 0;
     padding: 0;
 }
@@ -39,22 +41,20 @@ header {
 section {
     padding: 50px;
     text-align: center;
-    max-width: ;
+    font-size: 1.5rem;
 }
 
 section h1 {
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
-section p {
-    font-size: 18px;
-    line-height: 1.5;
+li {
+    line-height: 3rem;
 }
 
 @media screen and (max-width: 768px) {
     header {
-        height: 60px;
+        height: 4rem;
     }
 
     .logo {
@@ -62,15 +62,8 @@ section p {
     }
 
     section {
+        font-size: 1.1rem;
         padding: 20px;
-    }
-
-    section h1 {
-        font-size: 1.6rem;
-    }
-
-    section p {
-        font-size: 16px;
     }
 }
 
@@ -90,50 +83,19 @@ section.left-TitleGB h6 {
     text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-    section.left-TitleGB {
-        padding: 10px;
-    }
-
-    section.left-TitleGB h1 {
-        font-size: 28px;
-    }
-
-    section.left-TitleGB h2 {
-        font-size: 24px;
-    }
-
-    section.left-TitleGB h3 {
-        font-size: 20px;
-    }
-
-    section.left-TitleGB h4 {
-        font-size: 18px;
-    }
-
-    section.left-TitleGB h5 {
-        font-size: 16px;
-    }
-
-    section.left-TitleGB h6 {
-        font-size: 14px;
-    }
-
-    section.left-TitleGB p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
+a {
+    line-height: 3rem;
+    background-color: gold;
 }
 
 a {
     position: relative;
     color: #000000;
     font-weight: bold;
-    line-height: 3rem;
-    /* text-decoration: none; */
-  }
-  
-  a::after {
+    text-decoration: none;
+}
+
+a::after {
     content: "";
     position: absolute;
 
@@ -143,13 +105,13 @@ a {
     height: 2px;
     background-color: #000;
     transition: width 0.3s ease;
-  }
-  
-  a:hover::after {
+}
+
+a:hover::after {
     width: 100%;
-  }
-  
-  
+}
+
+
 
 /* 模态框样式 */
 .modal {
@@ -185,3 +147,8 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+footer {
+    text-align: center;
+    font-size: 3px;
+  }
