@@ -37,7 +37,6 @@ header {
 
 
 section {
-    background-color: ;
     padding: 50px;
     text-align: center;
     max-width: ;
@@ -87,7 +86,7 @@ section.left-TitleGB h3,
 section.left-TitleGB h4,
 section.left-TitleGB h5,
 section.left-TitleGB h6 {
-    color: #008E80;
+    color: #00796B;
     text-align: left;
 }
 
