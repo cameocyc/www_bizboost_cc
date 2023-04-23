@@ -152,3 +152,21 @@ footer {
     text-align: center;
     font-size: 10px;
   }
+
+  @keyframes highlight {
+    0% {
+        background-color:rgba(127, 255, 212, 0.2);
+    }
+    50% {
+        background-color:rgba(127, 255, 212, 0.5);
+    }
+    100% {
+        background-color:rgba(127, 255, 212, 0.2);
+    }
+}
+
+span.highlight {
+    animation-name: highlight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
