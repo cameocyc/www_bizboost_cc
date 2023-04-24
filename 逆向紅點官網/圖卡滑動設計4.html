@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖卡滑動設計4_圖文卡片按下去的效果</title>
+    <style>
+        .card-section {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+            max-width: 1000px;
+            padding: 12px;
+        }
+
+        .card {
+            flex: 0 0 calc(100% / 5 - 12px);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            padding: 16px;
+            text-align: center;
+            transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+            margin: 10px 10px;
+        }
+
+        /* 圖文卡片浮起來的效果 */
+        /* .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+            transform: translateY(-5px);
+        } */
+
+        /* 圖文卡片按下去的效果 */
+        .card:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            transform: scale(0.95);
+        }
+
+        .img-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .2s ease-in-out;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.2);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .card .date {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .card .tags {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .card .tags li {
+            font-size: 14px;
+            color: #777;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 4px 8px;
+            margin-right: 8px;
+        }
+
+        .card .description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-container::before,
+        .card-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            pointer-events: none;
+            background-image: linear-gradient(to right, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+            z-index: 1;
+        }
+
+        .card-container::after {
+            right: 0;
+            transform: rotate(180deg);
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div>
+        <p>確保照片在正方形中的顯示方式：</p>
+        <p>當照片的高度小於寬度時，照片的高度會等於正方形的高度進行顯示，並在滑鼠滑入時保持正方形尺寸不變，同時放大圖片。</p>
+        <p>當照片的寬度小於高度時，照片的寬度會等於正方形的寬度進行顯示，並在滑鼠滑入時保持正方形尺寸不變，同時放大圖片。</p>
+    </div>
+    <section class="card-section">
+        <div class="card-container">
+            <div class="card">
+                <div class="img-container">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <h2>Card Title 1</h2>
+                <p class="date">Date 1</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 1</p>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <h2>Card Title 2</h2>
+                <p class="date">Date 2</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 2</p>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+                <h2>Card Title 3</h2>
+                <p class="date">Date 3</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 3</p>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="image4.jpg" alt="Image 4">
+                </div>
+                <h2>Card Title 4</h2>
+                <p class="date">Date 4</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 4</p>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="image5.jpg" alt="Image 5">
+                </div>
+                <h2>Card Title 5</h2>
+                <p class="date">Date 5</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 5</p>
+            </div>
+        </div>
+    </section>
+    <div>
+        要在卡片容器的左右邊界添加漸變柔化效果，您可以使用以下 CSS 代碼：
+
+        css
+        Copy code
+        .card-container::before,
+        .card-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        pointer-events: none;
+        background-image: linear-gradient(to right, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+        z-index: 1;
+        }
+
+        .card-container::after {
+        right: 0;
+        transform: rotate(180deg);
+        }
+        這段 CSS 代碼首先為 .card-container 容器添加了兩個偽元素 ::before 和 ::after，並給它們設置了絕對定位。這使得偽元素能夠覆蓋在卡片容器的左右邊界。
+
+        background-image 屬性用於為偽元素添加線性漸變背景，從左側的完全不透明（rgba(245, 245, 245, 1)）漸變至右側的完全透明（rgba(245, 245, 245, 0)）。
+
+        pointer-events: none; 屬性用於確保用戶可以與被偽元素覆蓋的卡片互動，不受偽元素的影響。
+
+        最後，.card-container::after 的 right: 0; 和 transform: rotate(180deg); 屬性將偽元素放置在卡片容器的右邊界，並翻轉漸變效果。
+
+        將此 CSS 代碼添加到您的現有代碼中，即可實現在卡片容器的左右邊界添加漸變柔化效果。
+    </div>
+
+</body>
+
+</html>

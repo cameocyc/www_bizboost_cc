@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖卡滑動設計</title>
+    <style>
+        .card-section {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: nowrap;
+            /* Prevent cards from wrapping to next line */
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            /* Add momentum scrolling on iOS */
+            width: 100%;
+            max-width: 1000px;
+            padding: 12px;
+        }
+
+        .card {
+            flex: 0 0 calc(100% / 5 - 12px);
+            /* Divide container into 5 equal-width cards */
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            padding: 16px;
+            text-align: center;
+            margin: 0 12px;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .card .date {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .card .tags {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .card .tags li {
+            font-size: 14px;
+            color: #777;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 4px 8px;
+            margin-right: 8px;
+        }
+
+        .card .description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="card-section">
+        <div class="card-container">
+            <div class="card">
+                <img src="image1.jpg" alt="Image 1">
+                <h2>Card Title 1</h2>
+                <p class="date">Date 1</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 1</p>
+            </div>
+            <div class="card">
+                <img src="image2.jpg" alt="Image 2">
+                <h2>Card Title 2</h2>
+                <p class="date">Date 2</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 2</p>
+            </div>
+            <div class="card">
+                <img src="image3.jpg" alt="Image 3">
+                <h2>Card Title 3</h2>
+                <p class="date">Date 3</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 3</p>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <h2>Card Title 4</h2>
+                <p class="date">Date 4</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 4</p>
+            </div>
+            <div class="card">
+                <img src="image5.jpg" alt="Image 5">
+                <h2>Card Title 5</h2>
+                <p class="date">Date 5</p>
+                <ul class="tags">
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                </ul>
+                <p class="description">Card Description 5</p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
