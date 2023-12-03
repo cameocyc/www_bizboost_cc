@@ -170,3 +170,18 @@ span.highlight {
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #e8491d;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.button:hover {
+    background: #333;
+}

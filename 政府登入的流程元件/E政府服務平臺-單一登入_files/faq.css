@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*faq*/
+.faq{padding:5px 8px; font-size:13px; line-height:120%; }
+.faq .nav { margin-bottom:5px;}
+.faq .nav li{ float:left; margin:0 2px 3px; text-align:center; font-size:12px; line-height:120%; font-weight:bold; width:90px; height:34px;}
+.faq .nav li a{background:url(../image/nav.png) no-repeat; width:90px; height:26px; display:block; color:#6c6c6c;text-shadow:1px  1px  1px  #fff;background-size:90px 34px; padding-top:8px;}
+.faq .nav li a.type2{background:url(../image/nav.png) no-repeat; width:90px; height:34px; display:block; color:#6c6c6c;text-shadow:1px  1px  1px  #fff;background-size:90px 34px; padding-top:2px;}
+.faq .nav li a.on{background:url(../image/nav_o.png) no-repeat; width:90px; height:34px; display:block;color:#916c27;text-shadow:1px  1px  1px  #fff; background-size:90px 34px;}
+
+
+.faqX{padding:15px 16px; font-size:16px; line-height:120%; }
+.faqX .navX { margin-bottom:15px;}
+.faqX .navX li{ float:left; margin:0 4px 6px; text-align:center; font-size:16px; line-height:120%; font-weight:bold; width:120px; height:40px;}
+.faqX .navX li a{background:url(../image/nav.png) no-repeat; width:120px; height:40px; display:block; color:#6c6c6c;text-shadow:1px  1px  1px  #fff;background-size:120px 40px; padding-top:8px;}
+.faqX .navX li a.type2{background:url(../image/nav.png) no-repeat; width:120px; height:40px; display:block; color:#6c6c6c;text-shadow:1px  1px  1px  #fff;background-size:120px 40px; padding-top:2px;}
+.faqX .navX li a.on{background:url(../image/nav_o.png) no-repeat; width:120px; height:40px; display:block;color:#916c27;text-shadow:1px  1px  1px  #fff; background-size:120px 40px;}
+
+.section{}
+.section .title {background:url(../image/in_tt_bg_01.png) 0px 0 no-repeat;height:26px; background-size:225px 26px; color:#31b0aa; padding:0px 0 0 225px; margin-bottom:5px; position: relative;}
+.section .title h2{ color:#31b0aa; font-size:15px; position: absolute; left: 20px; top: 4px; background: none; padding: 0;}
+.section .title .bg{background:url(../image/in_tt_bg_02.png) right 0 no-repeat ; background-size:100% 26px;height:26px;}
+
+.faq .box{ padding:8px 20px 8px;}
+.faq .box h3{color:#31b0aa; border-bottom:1px solid #cdcfcf; padding-bottom:5px; margin-bottom:10px; background:url(../image/icon_q.png) no-repeat; padding-left:18px;background-size:15px 12px; line-height:140%;}
+.faq .box .anwser{ background:url(../image/icon_a.png) no-repeat; background-size:13px 12px; padding-left:15px; }
+.faq .box .anwser h4{color:#646464;}
+.faq .box .anwser p{color:#646464;text-align:justify; margin-bottom:3px;}
