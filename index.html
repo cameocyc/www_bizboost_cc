@@ -265,6 +265,7 @@
     </main>
     <footer>
         <button class="button" onclick="copyAndSaveContent()">複製全部文字並保存為txt文件</button>
+        <button class="button" onclick="copyText()">複製所有文字</button>
         <!-- <h2>BizBoost.cc</h2>
         <h3>A platform for digital transformation.</h3> -->
         <p>© 2023 BizBoost.cc. All rights reserved. In partnership with Ragic.</p>
@@ -296,6 +297,21 @@
 
             alert('頁面內容已複製並保存為文本文件。');
         }
+
+        function copyText() {
+            // 選擇並複製頁面內容
+            const body = document.body;
+            const range = document.createRange();
+            range.selectNode(body);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand('copy');
+            selection.removeAllRanges();
+
+            alert('頁面上的所有文字已複製。您現在可以在任何地方貼上它。');
+        }
+        
     </script>
 </body>
 
